@@ -10,9 +10,14 @@ package tp2_paradigmas3;
  * @author Marcos
  */
 public interface IServicio {
-    public boolean activarTelefono(Habitacion habitacion);
-    public boolean activarInternet(Habitacion habitacion);
-    public boolean activarBar(Habitacion habitacion);
-    public boolean activarSpa(Habitacion habitacion);
+    float telefono = 40;
+    float internet = 60;
+    float spa = 100;
+    float bar = 50;
+    
+    public boolean activarTelefono();
+    public boolean activarInternet();
+    public boolean activarBar();
+    public boolean activarSpa();
             
 }

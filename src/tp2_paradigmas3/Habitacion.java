@@ -5,26 +5,76 @@
  */
 package tp2_paradigmas3;
 
+import tp2_paradigmas3.IServicio;
+
 /**
  *
  * @author Marcos
  */
-public class Habitacion implements IServicio{
+public abstract class  Habitacion implements IServicio{
+    
+    protected float costo;
+    protected boolean flagTelefono;
+    protected boolean flagInternet,
+                    flagSpa, flagBar;
 
-    public boolean activarTelefono(Habitacion habitacion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   /* public Habitacion() {
+        this.flagInternet = false;
+        this.flagTelefono = false;
+        this.flagBar = false;
+        this.flagSpa = false;
+
+    }*/
+    
+    /**
+     *
+     * @return
+     */
+    
+    public float getCosto(){
+        return costo;
     }
 
-    public boolean activarInternet(Habitacion habitacion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public float calcularCosto() {
+        if(flagTelefono)
+            activarTelefono();
+        if(flagInternet)
+            activarInternet();
+        if(flagBar)
+            activarBar();
+        if(flagSpa)
+            activarSpa();
+        
+        return costo;
+    }
+    
+    @Override
+    public boolean activarTelefono() {
+        flagTelefono = true;
+        costo += telefono;
+        return flagTelefono;
+       
     }
 
-    public boolean activarBar(Habitacion habitacion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    @Override
+    public boolean activarInternet() {
+        flagInternet = true;
+        costo += internet;
+        return flagInternet;
     }
 
-    public boolean activarSpa(Habitacion habitacion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    @Override
+    public boolean activarBar() {
+        flagBar = true;
+        costo += bar;
+        return flagBar;
+    }
+
+    @Override
+    public boolean activarSpa() {
+        flagSpa = true;
+        costo += spa;
+        return flagSpa;
     }
     
 }

@@ -9,15 +9,16 @@ package tp2_paradigmas3;
  *
  * @author Marcos
  */
-public class TP2_Paradigmas3 {
+public class Suite extends Habitacion{
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        Suite suite = new Suite();
-        suite.calcularCosto();
-        System.out.print(suite.getCosto());
+    public Suite() {
+        flagInternet = true;
+        flagSpa = true;
+        flagTelefono = true;
+        flagBar = true;
+        costo = 0;
+        
     }
+    
     
 }

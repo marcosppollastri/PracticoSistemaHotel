@@ -9,11 +9,6 @@ package tp2_paradigmas3;
  *
  * @author Marcos
  */
-public class Cliente {
-    
-   private String nombre;
-   private String apellido;
-   private int telefono;
-   
+public class Doble extends Habitacion{
     
 }
