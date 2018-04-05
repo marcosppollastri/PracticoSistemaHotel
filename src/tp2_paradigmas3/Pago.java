@@ -11,4 +11,8 @@ package tp2_paradigmas3;
  */
 public class Pago extends Transaccion{
     
+    public Pago(Persona cliente, Habitacion habitacion) {
+        super(cliente, habitacion);
+    }
+    
 }

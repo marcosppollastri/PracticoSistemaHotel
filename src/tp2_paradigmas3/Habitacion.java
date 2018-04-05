@@ -5,8 +5,6 @@
  */
 package tp2_paradigmas3;
 
-import tp2_paradigmas3.IServicio;
-
 /**
  *
  * @author Marcos

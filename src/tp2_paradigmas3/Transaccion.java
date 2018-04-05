@@ -11,7 +11,23 @@ package tp2_paradigmas3;
  */
 public class Transaccion {
     
-   Cliente cliente;
-   Habitacion habitacion;
+   protected Persona cliente;
+   protected Habitacion habitacion;
+   protected float monto;
+
+    public Transaccion(Persona cliente, Habitacion habitacion) {
+        this.cliente = cliente;
+        this.habitacion = habitacion;
+        habitacion.calcularCosto();
+        monto = habitacion.getCosto();
+        
+    }
+
+    public float getMonto() {
+        return (float) (monto);
+    }
+    
+    
+   
     
 }

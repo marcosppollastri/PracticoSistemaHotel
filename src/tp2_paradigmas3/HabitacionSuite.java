@@ -9,10 +9,16 @@ package tp2_paradigmas3;
  *
  * @author Marcos
  */
-public class Consumo extends Transaccion{
-    
-    public Consumo(Persona cliente, Habitacion habitacion) {
-        super(cliente, habitacion);
+public class HabitacionSuite extends Habitacion{
+
+    public HabitacionSuite() {
+        flagInternet = true;
+        flagSpa = true;
+        flagTelefono = true;
+        flagBar = true;
+        costo = 0;
+        
     }
+    
     
 }

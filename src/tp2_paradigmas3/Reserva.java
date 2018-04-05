@@ -11,4 +11,8 @@ package tp2_paradigmas3;
  */
 public class Reserva extends Transaccion {
     
+    public Reserva(Persona cliente, Habitacion habitacion) {
+        super(cliente, habitacion);
+    }
+    
 }
